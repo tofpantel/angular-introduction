@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./one-way-bind.component.css']
 })
 export class OneWayBindComponent {
+  imageURL = 'https://picsum.photos/200';
+  imageALT = 'An image from picsum photos';
+  imageTooltip = this.imageALT;
+
+  buttonDisabled = false;
+  buttonPrompt = 'Click me'
 
 }

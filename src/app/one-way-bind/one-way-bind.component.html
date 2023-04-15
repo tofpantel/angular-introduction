@@ -1,1 +1,29 @@
-<p>one-way-bind works!</p>
+<div class="border border-2 border-secondary">
+    <div class="bg-info text-center">event-bind.component</div>
+
+    <div class="row m-2">
+        <div class="col">
+            <!-- using one way binding -->
+            <img [src]="imageURL" 
+            [alt]="imageALT" 
+            [title]="imageTooltip"/>
+            <button [disabled]="buttonDisabled" class="m-2 btn btn-primary">
+                {{ buttonPrompt }}
+            </button>
+        </div>
+
+        <div class="col">
+            <!-- using value interpolation -->
+            <img 
+            alt="{{ imageALT }}"
+            title="{{ imageTooltip }}"
+            src="{{ imageURL }}"
+            />
+            <button
+             disabled="{{ buttonDisabled ? 'disabled' : null}}"
+             class="m-2 btn btn-primary">
+                {{ buttonPrompt }}
+            </button>
+        </div>
+    </div>
+</div>
